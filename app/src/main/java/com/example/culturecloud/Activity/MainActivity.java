@@ -123,6 +123,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         http_request = doRequest.getInstance(getApplicationContext());
         //"长沙市","adcode":"430100" "长沙县","adcode":"430121"
         http_request.doGet("https://restapi.amap.com/v3/ip?key="+ NetworkInfo.amap_api_key,200,handler);
+
+        BaseActivity.addActivity(this);
     }
 
     @Override
@@ -202,6 +204,25 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 this.startActivity(intent);
                 break;
+            case R.id.iv_ydcc://设置退出系统
+                final EditText input_password = new EditText(this);
+                new AlertDialog.Builder(this).setTitle("password")
+                        .setIcon(R.drawable.exit_icon)
+                        .setView(input_password)
+                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                //按下确定键后的事件
+                                /*Toast.makeText(getApplicationContext(), input_password.getText().toString(),Toast.LENGTH_LONG).show();*/
+                                String input_word = input_password.getText().toString();
+                                if("ydcc123".equals(input_word)){
+                                   BaseActivity.finishAll();
+                                }else{
+                                    Toast.makeText(getApplicationContext(), "password error",Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        }).setNegativeButton("取消",null).show();
+                break;
             default:
                 break;
         }
@@ -228,7 +249,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         setWeatherIcon(today_weatherInfo,today_weather_ic);
         setWeatherIcon(tomorrow_weatherInfo,tomorrow_weather_ic);
     }
-    public static void setWeatherIcon(String weatherInfo,ImageView imageView){
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        BaseActivity.removeActivity(this);
+    }
+
+    public static void setWeatherIcon(String weatherInfo, ImageView imageView){
         if(weatherInfo.contains("晴")&&weatherInfo.contains("云")){
             imageView.setImageResource(R.drawable.sun_cloud);
         }else if(weatherInfo.contains("雨")&&weatherInfo.contains("雪")){
@@ -248,5 +276,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         } else if(weatherInfo.contains("雪")) {
             imageView.setImageResource(R.drawable.snow);
         }
+
+
     }
 }

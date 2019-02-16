@@ -139,6 +139,8 @@ public class LoginActivity extends BaseActivity {
                 }
             }
         });
+
+        BaseActivity.addActivity(this);
     }
 
     @Override
@@ -153,5 +155,11 @@ public class LoginActivity extends BaseActivity {
                         | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         );
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        BaseActivity.removeActivity(this);
     }
 }

@@ -20,5 +20,6 @@ public class ContactActivity extends BaseActivity {
                 finish();
             }
         });
+        BaseActivity.addActivity(this);
     }
 }
