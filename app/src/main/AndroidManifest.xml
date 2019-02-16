@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.culturecloud">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/zjj_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.BaseActivity" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.WeatherInfoActivity" />
+        <activity android:name=".Activity.CulPersonActivity" />
+        <activity android:name=".Activity.SceneryActivity" />
+        <activity android:name=".Activity.SceneryPlayActivity" />
+        <activity android:name=".Activity.WebActivity" />
+        <activity android:name=".Activity.VideoActivity" />
+        <activity
+            android:name=".Activity.VideoInfoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Activity.VideoPlayActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Activity.NewsActivity" />
+        <activity android:name=".Activity.InfoActivity" />
+        <activity android:name=".Activity.ContactActivity" />
+        <activity android:name=".Activity.ReasearchActivity" />
+        <activity android:name=".Activity.IntroduceActivity" />
+        <activity android:name=".Activity.SceneryLoadActivity"></activity>
+    </application>
+
+</manifest>

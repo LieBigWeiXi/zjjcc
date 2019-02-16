@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="10"
+    android:background="@drawable/scenery_bkg">
+
+    <!--左侧布局-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:background="@drawable/scenery_left_bkg">
+
+        <ListView
+            android:id="@+id/scenery_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="143px"
+            android:layout_marginRight="12px"
+            android:divider="@color/transparent"
+            android:dividerHeight="30dp"/>
+
+    </LinearLayout>
+
+    <!--右侧布局-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="7"
+        android:layout_marginTop="66dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10" >
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:srlPrimaryColor="#444444"
+            android:layout_weight="9"
+            app:srlAccentColor="@android:color/white"
+            app:srlEnablePreviewInEditMode="true">
+
+        <GridView
+            android:layout_margin="33dp"
+            android:id="@+id/oldpic_gridview"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="10dp"
+            android:numColumns="3"
+
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp"
+            android:visibility="visible" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <com.example.culturecloud.Views.ReturnButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </com.example.culturecloud.Views.ReturnButton>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

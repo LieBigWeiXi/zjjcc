@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="15">
+
+    <LinearLayout
+        android:id="@+id/layout_magazine_type_id"
+        android:orientation="vertical"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_weight="3"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary">
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="主题分类"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#fff"/>
+            <com.example.culturecloud.Views.XCFlowLayout
+                android:layout_marginLeft="50dp"
+                android:layout_gravity="center"
+                android:id="@+id/theme_type"
+                android:layout_width="match_parent"
+                android:layout_height="42dp" >
+            </com.example.culturecloud.Views.XCFlowLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary">
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="人群分类"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#fff"/>
+            <com.example.culturecloud.Views.XCFlowLayout
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/crowd_type"
+                android:layout_width="match_parent"
+                android:layout_height="41dp">
+            </com.example.culturecloud.Views.XCFlowLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary">
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="字母分类"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#fff"/>
+            <com.example.culturecloud.Views.XCFlowLayout
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/letter_type"
+                android:layout_width="match_parent"
+                android:layout_height="43dp">
+            </com.example.culturecloud.Views.XCFlowLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_magazine_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="11"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <com.example.culturecloud.Views.ReturnButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.example.culturecloud.Views.ReturnButton>
+    </LinearLayout>
+
+
+</LinearLayout>

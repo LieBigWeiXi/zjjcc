@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scenery_play"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/scenery_play_bkg">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/scenery_layout"
+        android:layout_width="1350px"
+        android:layout_height="800px"
+        android:layout_marginTop="86dp"
+        android:layout_marginLeft="188dp"
+        android:background="@drawable/prev_back">
+        <com.example.culturecloud.Views.ErasureView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:id="@+id/ev_scenery"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_id"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/scenery_return_btn">
+    </Button>
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:textSize="30sp"
+        android:layout_centerInParent="true"
+        android:id ="@+id/mech_id"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/mech_id"
+        android:id ="@+id/openGL_code"
+        android:layout_marginTop="10dp"/>
+
+    <!--设备地理位置-->
+
+    <LinearLayout
+        android:id="@+id/input_layout"
+        android:layout_width="580dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/openGL_code"
+        android:layout_centerHorizontal="true"
+        android:weightSum="2">
+        <EditText
+            android:id="@+id/jd_edit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="经度"
+            android:textColorHint="@color/yellow"
+            android:textColor="#fff"/>
+        <EditText
+            android:id="@+id/wd_edit"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/green"
+            android:hint="纬度"
+            android:textColor="#fff"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="580dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="确      认"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:background="@color/scrollBar"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/input_layout"/>
+
+    <TextView
+        android:id="@+id/tv_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirm_btn"
+        android:layout_centerHorizontal="true"
+        android:text="显示测试"/>
+</RelativeLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical"
+    android:weightSum="7"
+    android:padding="10dp">
+    <!-- 主界面布局 1:5:1-->
+
+    <RelativeLayout
+        android:id="@+id/RL_top"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/iv_ydcc"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/yd_cc" />
+
+        <RelativeLayout
+            android:id="@+id/RL_weather"
+            android:layout_width="500dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <RelativeLayout
+                android:id="@+id/LL_weather_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/location_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="中国"
+                    android:layout_toLeftOf="@id/date_txt"
+                    android:textColor="#fff"
+                    android:layout_marginRight="5dp"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/date_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="2018 /01 /01"
+                    android:textColor="#fff"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+                <LinearLayout
+                    android:id="@+id/weather_simple_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/date_txt">
+                    <include layout="@layout/weather_simple" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="5"
+        android:layout_margin="25dp">
+        <include layout="@layout/main_menu"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_height="65dp"
+            android:layout_width="65dp"
+            android:src="@drawable/zjj_gwqrcode"/>
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:orientation="vertical"
+            android:weightSum="2"
+
+            android:layout_marginBottom="8dp"
+            >
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true">
+                <TextView
+                    android:layout_height="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="bottom"
+                    android:layout_marginLeft="5dp"
+                    android:text="友情链接："
+                    android:textSize="10sp"
+                    android:textColor="#fff"/>
+                <TextView
+                    android:id="@+id/tv_enterwebsite"
+                    android:layout_height="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:text="张家界市永定区图书馆"
+                    android:gravity="bottom"
+                    android:textSize="10sp"
+                    android:textColor="#fff" />
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_people_newspaper"
+                    android:layout_height="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="人民日报"
+                    android:gravity="bottom"
+                    android:textSize="10sp"
+                    android:textColor="#fff" />
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_jfj_newspaper"
+                    android:layout_height="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="解放军报"
+                    android:textSize="10sp"
+                    android:textColor="#fff" />
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_zjj_newspaper"
+                    android:layout_height="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="bottom"
+                    android:text="张家界日报"
+                    android:textSize="10sp"
+                    android:textColor="#fff" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text=" 中共张家界永定区委宣传部©2018版权所有 湘ICP备17015432号-1"
+                android:textSize="10sp"
+                android:textColor="#fff"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

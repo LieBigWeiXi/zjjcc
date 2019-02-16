@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#373A3B</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="scrollBar">#2ECCFA</color>
+    <color name="yellow">#FFF2FF00</color>
+    <color name="green">#CC7BDEAE</color>
+    <color name="dividerColor">#63dacfd3</color>
+    <color name="newItemColor">#87383033</color>
+    <color name="newsTitle">#e21a1b1b</color>
+    <color name="newsTitleColor">#e2e9ebef</color>
+</resources>

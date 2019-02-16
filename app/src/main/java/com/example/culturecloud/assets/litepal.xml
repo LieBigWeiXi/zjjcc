@@ -1,0 +1,9 @@
+<litepal>
+    <dbname vaulue="weather" />
+    <version value="1" />
+    <list>
+        <mapping class="com.example.culturecloud.db.Province"/>
+        <mapping class="com.example.culturecloud.db.City"/>
+        <mapping class="com.example.culturecloud.db.County"/>
+    </list>
+</litepal>
